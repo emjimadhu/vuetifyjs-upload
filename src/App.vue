@@ -2,6 +2,14 @@
   <v-app light>
     <v-toolbar app dark color="primary">
       <v-toolbar-title>Vuetify Upload Example</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        target="_blank"
+        href="https://github.com/emjimadhu/vuetifyjs-upload"
+      >
+        github
+    </v-btn>
     </v-toolbar>
     <v-content>
       <v-slide-y-transition mode="out-in">
@@ -82,7 +90,12 @@
             <v-flex xs12>
               <v-list two-line subheader>
                 <v-subheader inset>Files</v-subheader>
-                <v-list-tile avatar v-if="hasFiles" v-for="(file, index) in files" :key="index">
+                <v-list-tile
+                  avatar
+                  v-if="hasFiles"
+                  v-for="(file, index) in files"
+                  :key="index"
+                >
                   <v-list-tile-avatar>
                     <v-icon :class="[file.iconClass]">{{ file.icon }}</v-icon>
                   </v-list-tile-avatar>
